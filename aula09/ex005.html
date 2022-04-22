@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM </title>
+    <style>
+        body{
+            background: #6aa2cf;
+            color: white;
+            font: normal 18pt Arial;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg" name="msg" class="msg">Clique em mim</div>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[1]  //aqui estou pegando o segundo parágrafo
+        window.document.write('Está escrito assim: ' + p1.innerText)   //se usar o innerHTML já vem com a formatação do html
+
+        // var msg = window.document.getElementById('msg')
+        // msg.style.background = 'green'
+        // msg.innerText = 'Testando com id'
+
+        var msg = window.document.querySelector('div#msg')   //selecionando div com id msg, se for classe vai . ao invés de #
+        msg.style.background ='blue'
+
+        // var msg = window.document.getElementsByName('msg')[0]
+        // msg.innerText = 'Testando com name'
+
+        // window.document.getElementsByClassName('msg')[0]
+        // msg.innerText = "Testando com classe "
+
+    </script>
+    
+</body>
+</html>
