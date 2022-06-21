@@ -19,23 +19,16 @@ function inLista(n, l){
     }
 }
 
-function Adicionar() {
-    if (isNumero(num.value) && !inLista(num.value, valores)){
-        alert('Tudo ok!')
+function adicionar() {
+    if (isNumero(num.value) && !inLista(num.value, valores)){    
+        valores.push(Number(num.value))
+        let item = document.createElement('option')
+        item.text = `Valor ${num.value} adicionado`
+        lista.appendChild(item)
+        console.log(lista)
     } else {
         alert('Valor inválido ou já encontrado na lista')
     }
-
-
-    if (num.value.length == 0){
-        
-    } else {
-        let n = Number(num.value)
-        let c = 1
-        flista.innerHTML = ''
-        while (c <= 100) {
-            let item = document.createElement('option')
-            item.text= ``
-        }
-    }
+    num.value = ''
+    num.focus()
 }
